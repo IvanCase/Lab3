@@ -16,14 +16,14 @@ Description : Learning CSS.
             
             /*Modify #margin-demo to have a margin of 30px and a solid black border of 2px. Also, the borders must fit the content.*/
             border: 2px solid rgb(0, 0, 0);
-            display: inline-block;
-            margin-left:30px;
+            display: inline;
+            margin-left: 30px;
         }
 
         .padding-demo {
             /*Adjust .padding-demo to include 30px padding and a dashed red border of 2px.*/
             border: 2px dashed rgb(255, 0, 0);
-            padding:30px;
+            padding: 30px;
         }
 
         .container .nested-opacity {
@@ -33,12 +33,15 @@ Description : Learning CSS.
 
         
         .inline-demo {
-            /*Change the display to see all elements of this type in a line.*/
+    
+            display: inline-block;
+
             margin: 15px; 
         }
 
+
         .block-demo {
-            /*Ensure .block-demo centers its text.*/
+           text-align: center;
         }
 
         /*
@@ -48,19 +51,21 @@ Description : Learning CSS.
         */
 
         .block-demo > .inline-demo:first-child {            
-            /*
-            Add CSS that I stick the first child to the left side of the screen.
-            */
+            float: left;
             color: red;
             
         }
 
-        .block-demo > .inline-demo:nth-child(2) {            
+        .block-demo > .inline-demo:nth-child(2) {      
+            float: center;      
             color: blue;
         }
 
-        /* Add your css for the thrid child here. */
-
+        .block-demo > .inline-demo:nth-child(3) {      
+            float: right;      
+            color: rgb(0, 255, 136);
+            
+        }
         .image-demo {
             /* Modify the .image-demo class to adjust the image's width to 50% of the screen. */
             border: 2px solid blue;
